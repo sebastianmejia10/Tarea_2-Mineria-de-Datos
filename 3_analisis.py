@@ -1,6 +1,10 @@
 import pandas as pd
 import sqlite3
 import matplotlib.pyplot as plt
+from pathlib import Path
+
+output_dir = Path('graficas')
+output_dir.mkdir(exist_ok=True)
 
 #Conexion a la base de datos
 
@@ -28,11 +32,11 @@ plt.title('Cumulo de estrellas Omega Centauri (Cone Search 0.5 grados)')
 plt.xlabel('Movimiento Propio En Ascensión Recta (Grados)')
 plt.ylabel('Movimiento Propio En Declinación (Grados)')
 plt.gca().invert_xaxis()
-plt.savefig('grafica1.png')
+plt.savefig(output_dir / 'grafica1.png')
 
 #Consulta SQL para obtener los datos de la grafica 2
 
-query2 = "SELECT * FROM estrellas WHERE pmDE BETWEEN -10 AND -5 AND pmRA BETWEEN -7 AND 1;"
+query2 = "SELECT * FROM estrellas WHERE pmDE BETWEEN -11 AND -4 AND pmRA BETWEEN -9 AND 1;"
 conexion = sqlite3.connect('arqueologia.db')
 datos2 = pd.read_sql_query(query2, conexion)
 conexion.close()
@@ -57,6 +61,6 @@ cbar = plt.colorbar(scatter)
 cbar.set_label('Magnitud G')
 
 plt.tight_layout()
-plt.savefig('grafica2.png')
+plt.savefig(output_dir / 'grafica2.png')
 
 
