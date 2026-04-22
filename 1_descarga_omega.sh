@@ -13,4 +13,3 @@ URL_ADQL=$(echo $ADQL | sed 's/ /+/g')
 wget -q -O omega_bruto.csv "$URL$URL_ADQL" 
 
 echo "Descarga de datos de Omega Centauri completada. Archivo guardado como 'omega_bruto.csv'."
-echo $URL_ADQL
