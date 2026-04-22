@@ -10,7 +10,7 @@
 ## Gráficas de Análisis
 
 ### Gráfica 1
-![Gráfica 1](grafica1.png)
+![Gráfica 1](graficas/grafica1.png)
 
 ### Gráfica 2
-![Gráfica 2](grafica2.png)
+![Gráfica 2](graficas/grafica2.png)
