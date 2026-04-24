@@ -1,6 +1,6 @@
-# 🌌 NGC 5139 – Cúmulo Globular Omega Centauri
+#  NGC 5139 – Cúmulo Globular Omega Centauri
 
-## 📍 Coordenadas en grados decimales
+##  Coordenadas en grados decimales
 
 | Coordenada | Valor (grados decimales) |
 |------------|--------------------------|
@@ -11,9 +11,9 @@ Estas coordenadas corresponden al centro del cúmulo globular Omega Centauri, un
 
 ---
 
-## 📊 Gráficas de Análisis
+##  Gráficas de Análisis
 
-### 🔹 Gráfica 1: Movimiento propio (pmRA vs pmDE)
+###  Gráfica 1: Movimiento propio (pmRA vs pmDE)
 
 ![Gráfica 1](graficas/grafica1.png)
 
@@ -29,11 +29,11 @@ Se distinguen claramente dos poblaciones:
 - **Racimo compacto desplazado:**  
   Corresponde a las estrellas del cúmulo Omega Centauri. Estas estrellas comparten un movimiento común, lo que indica que están gravitacionalmente ligadas y se mueven como un sistema coherente alrededor de la galaxia.
 
-👉 Este resultado demuestra que es posible identificar miembros de un cúmulo estelar utilizando únicamente información cinemática.
+ Este resultado demuestra que es posible identificar miembros de un cúmulo estelar utilizando únicamente información cinemática.
 
 ---
 
-## 🧠 Filtro cinemático con SQL
+##  Filtro cinemático con SQL
 
 Para aislar las estrellas pertenecientes al cúmulo, se aplicó el siguiente filtro en el espacio de movimiento propio:
 
@@ -54,7 +54,7 @@ Este recorte selecciona la región donde se concentra el cúmulo en la gráfica 
 
 ---
 
-## 🌈 Gráfica 2: Diagrama Color–Magnitud (HR)
+##  Gráfica 2: Diagrama Color–Magnitud (HR)
 
 ![Gráfica 2](graficas/grafica2.png)
 
@@ -78,7 +78,7 @@ Después del filtrado, el diagrama revela claramente:
 
 ---
 
-## ⚖️ Comparación: antes vs después del filtrado
+##  Comparación: antes vs después del filtrado
 
 
 ![Gráfica 3](graficas/hr_comparacion.png)
@@ -90,7 +90,7 @@ Después del filtrado, el diagrama revela claramente:
 | Mezcla de poblaciones | Población coherente |
 | Difícil interpretación | Interpretación clara |
 
-👉 El filtrado cinemático permite estudiar la evolución estelar real del cúmulo sin contaminación.
+ El filtrado cinemático permite estudiar la evolución estelar real del cúmulo sin contaminación.
 
 ---
 
