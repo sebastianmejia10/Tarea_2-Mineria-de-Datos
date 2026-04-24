@@ -63,4 +63,43 @@ cbar.set_label('Magnitud G')
 plt.tight_layout()
 plt.savefig(output_dir / 'grafica2.png')
 
+# Grafica comparacion 
+
+datos["color"] = datos["BPmag"] - datos["RPmag"]
+datos2["color"] = datos2["BPmag"] - datos2["RPmag"]
+
+fig, ax = plt.subplots(1, 2, figsize=(16, 7))
+
+sc1 = ax[0].scatter(
+    datos['color'], datos['Gmag'],
+    c=datos['Gmag'], cmap='viridis',
+    s=5, alpha=0.7
+)
+
+ax[0].invert_yaxis()
+ax[0].set_xlabel('Índice de Color (BP - RP)')
+ax[0].set_ylabel('Magnitud G (mag)')
+ax[0].set_title('HR sin filtro (Vía Láctea + cúmulo)')
+
+cbar1 = plt.colorbar(sc1, ax=ax[0])
+cbar1.set_label('Magnitud G')
+
+sc2 = ax[1].scatter(
+    datos2['color'], datos2['Gmag'],
+    c=datos2['Gmag'], cmap='viridis',
+    s=5, alpha=0.7
+)
+
+ax[1].invert_yaxis()
+ax[1].set_xlabel('Índice de Color (BP - RP)')
+ax[1].set_ylabel('Magnitud G (mag)')
+ax[1].set_title('HR filtrado (Omega Centauri)')
+
+cbar2 = plt.colorbar(sc2, ax=ax[1])
+cbar2.set_label('Magnitud G')
+
+# Ajuste final
+plt.tight_layout()
+plt.savefig(output_dir / 'hr_comparacion.png')
+
 
